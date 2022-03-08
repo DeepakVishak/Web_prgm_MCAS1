@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handling</title>
+    <style>
+        .main{
+            height: 250px;
+            width:250px;
+        }
+        #text{
+            margin-top: -150px;
+            margin-left: 40px;
+        }
+    </style>
+    <script>
+        function hover(){
+            document.getElementById('boy').style.opacity=0;
+            document.getElementById('main').style.backgroundColor="#fbd30c";
+            document.getElementById('text').innerHTML="Hello JS Event Handling";
+        }
+        function hoverout(){
+            document.getElementById('boy').style.opacity=1;
+            document.getElementById('text').innerHTML="";
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Event handling using javascript</h1>
+    <div class="main" id="main">
+        <img src="boy.png" id="boy" alt="image not found" height="250px" width="250px" onmouseover="hover()" onmouseout="hoverout()">
+        <p id="text"></p>
+    </div>
+</body>
+</html>
